@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>联系方式</title>
+	<link href="../css/head.css" rel="stylesheet" />
+	<style type="text/css">
+		.contact {
+			width: 1200px;
+			height: 800px;
+			border: 1px #ccc solid;
+			font-size: 14px;
+			font-family: "微软雅黑";
+			background-color: #FFFFFF;
+		}
+
+		.top1,
+		.main {
+			width: 1000px;
+			height: 100px;
+			margin: 0px auto;
+			padding: 30px;
+		}
+
+		.h2 {
+			padding-bottom: 30px;
+		}
+
+		.main {
+			height: 500px;
+			box-shadow: 10px 10px 10px #CCCCCC;
+		}
+
+		h3 {
+			margin: 20px 0px;
+		}
+
+		.left1,
+		.right1 {
+			width: 480px;
+			height: 500px;
+			padding: 30px 0px;
+		}
+
+		.left1 {
+			float: left;
+		}
+
+		.right1 {
+			float: right;
+		}
+
+		.left1>dl>dd>input {
+			width: 400px;
+			height: 25px;
+			line-height: 25px;
+			margin: 20px 0px;
+		}
+
+		textarea {
+			width: 400px;
+			height: 120px;
+		}
+
+		.btn {
+			width: 50px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			margin-top: 10px;
+			background-color: #ff8726;
+			color: #fff;
+			border: none;
+		}
+
+		.img_adderss {
+			width: 400px;
+			height: 200px;
+			background-image: url(../img/b2.jpg);
+			background-size: 100% 100%;
+		}
+
+		.img_adderss img {
+			width: 100%;
+			height: 90%;
+		}
+
+		.adderss {
+			width: 260px;
+			line-height: 25px;
+		}
+
+		.top1 p {
+			padding-bottom: 15px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container">
+		<!-- 页头 -->
+		<div class="top_head">
+			<h2>简年杰| 个人网站</h2>
+		</div>
+		<!-- 导航栏 -->
+		<div class="top_nav">
+			<ul>
+				<li id="li_1"><a href="../index.html" style="color: #FF8726;">网站首页</a></li>
+				<li><a href="AboutMe.html">个人信息</a></li>
+				<li><a href="Experience.html">兴趣爱好</a></li>
+				<li><a href="Contact.html">联系方式</a></li>
+			</ul>
+		</div>
+		<div id=top_nav1></div>
+
+		<!-- 联系方式 -->
+		<div class="contact">
+			<div class="top1">
+				<h2 class="h2">联系方式</h2>
+				<p>欢迎做朋友<br /> </p>
+				<p>If you are interested in me, you can contact me </p>
+
+			</div>
+			<div class="main">
+				<div class="left1">
+					<h3>请填写您的联系方式</h3>
+					<dl>
+						<dt>Name:</dt>
+						<dd><input type="text" id="t1"></dd>
+					</dl>
+					<dl>
+						<dt>Email:</dt>
+						<dd><input type="text" id="t2"></dd>
+					</dl>
+					<dl>
+						<dt>Message:</dt>
+						<dd><textarea id="t1"></textarea></dd>
+					</dl>
+
+					<button class="btn" onclick="send()">发送</button>
+
+
+				</div>
+				<div class="right1">
+					<h3>我的位置</h3>
+					<!-- 位置图片 -->
+					<div class="img_adderss"><img src="../img/location.png" /></div>
+
+					<h3>具体地址</h3>
+					<div class="adderss">
+						重庆市南岸区崇文路2号重庆邮电大学<br /><br />
+						联系电话: 15320232510<br />
+						电子邮箱: 321634844@qq.com
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!--页脚-->
+		<footer>
+			<center>自动化学院2021213198简年杰</center>
+		</footer>
+	</div>
+
+
+	<!-- js代码 -->
+	<script type="text/javascript">
+		// 检测是否发送为空事件
+
+		function send() {
+			var val1 = document.getElementById("t1").value
+			var val2 = document.getElementById("t2").value
+
+			if (val1 == "" || val2 == "") {
+				alert("请输入姓名和邮箱！");
+			} else {
+				alert("发送成功！");
+			}
+
+		}
+	</script>
+</body>
+
+</html>
